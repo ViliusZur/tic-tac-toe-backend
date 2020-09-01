@@ -19,7 +19,7 @@ exports.checkForWinner = async (squares) => {
 
   // check for errors
   const count = this.countFrequency(squares);
-  if (count.null === 9) return null;
+  if (count.null === 9 || (count.X === 1 && count.null === 8)) return null;
   if (count.X !== (count.O + 1) && count.X !== count.O) throw new Error('impossible game mechanic: count.X !== count.O + 1 && count.X !== count.O');
   if (!this.containsOnly(squares, ['X', 'O', null])
    && !this.containsOnly(squares, ['X', 'O'])) throw new Error('squares array must contain values that are X and O (or null)');
