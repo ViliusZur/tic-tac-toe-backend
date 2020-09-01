@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const logs = require('../models/logs');
+const logs = require('../models/logs/logs');
 
 const router = express.Router();
 
@@ -28,7 +28,6 @@ router.post('/log', bodyParser.json(), async (req, res) => {
     // else add data to game squares and add transformed data to log
     sess.squares[square] = value;
     sess.log.unshift(await logs.transformToReadableString(square, value));
-
     // check for winner
     const ans = await logs.checkForWinner(sess.squares);
     if (ans !== null) {
