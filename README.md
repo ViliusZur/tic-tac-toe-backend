@@ -4,7 +4,9 @@ This is the backend of a game Tic-Tac-Toe. The frontend can be found [here](http
 
 Frontend displays the game board, game state, and logs. Every event in the game is sent to the backend API to store in the session. Backend API also determines if there is a winner with the current game state. After every event, frontend sends a GET request to backend API to retrieve current game state and logs. If the page is refreshed, frontend sends a GET request to the API to retrieve logs and game state at which point the game resumes. Frontend also has two buttons - New Game, for clearing the game state and starting a new game, and Clear Logs, which starts a new session in the backend clearing the logs and game state.
 
-[Git flow](https://danielkummer.github.io/git-flow-cheatsheet/), [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/), and [Airbnb's ESLint](https://www.npmjs.com/package/eslint-config-airbnb-base) were used in this project to produce better quality code and keep this git repository organized. [Jest](https://jestjs.io/en/) was used or unit testing.
+A seed, in a form of a tic-tac-toe tutorial in React ([tutorial](https://reactjs.org/tutorial/tutorial.html)), for the game board in the frontend was used to get things started faster. 
+
+[ReactJS](https://reactjs.org/) was used as the framework for frontend, and [NodeJS](https://nodejs.org/en/) - as the framework for backend API. [Git flow](https://danielkummer.github.io/git-flow-cheatsheet/), [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/), and [Airbnb's ESLint](https://www.npmjs.com/package/eslint-config-airbnb-base) were used in this project to produce better quality code and keep this git repository organized. [Jest](https://jestjs.io/en/) was used or unit testing.
 
 <h2>How to run the project</h2>
 
